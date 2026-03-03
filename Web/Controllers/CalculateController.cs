@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-
+using Domain;
 
 namespace Web.Controllers
 {
@@ -11,8 +11,7 @@ namespace Web.Controllers
         [HttpGet("Add/{left}/{right}")]
         public int Get(int left, int right)
         {
-            throw new NotImplementedException();
-
+            return new Calculator().Sum(left, right);
         }
     }
 }
