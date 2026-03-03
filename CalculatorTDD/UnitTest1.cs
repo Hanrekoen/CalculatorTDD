@@ -1,4 +1,5 @@
 using Domain;
+using FluentAssertions;
 
 namespace CalculatorTDD
 {
@@ -6,17 +7,11 @@ namespace CalculatorTDD
     {
         [Fact]
         public void Sum_Of_2_and_2_should_be_4()
-        {
-            var calculator = new Calculator();
+        => new Calculator()
+            .Sum(2, 2)
+            .Should().Be(4);
 
-            var result = calculator.Sum(2, 2);
-            if (result != 4)
-            {
-                throw new Exception($"Expected 4 but got {result}");
-            }
-        }
 
-        
-        
+
     }
 }
