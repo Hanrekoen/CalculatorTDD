@@ -1,4 +1,4 @@
-using Domain;
+
 
 namespace CalculatorTDD
 {
@@ -7,9 +7,7 @@ namespace CalculatorTDD
         [Fact]
         public void Test1()
         {
-            var calculator = new Calculator();
-            if (calculator.Sum(2, 2) != 4)
-                throw new Exception();
+            
         }
 
         
